@@ -1,0 +1,41 @@
+<h4>span span</h4>
+
+<p>{{isKayan}}</p>
+<span [class]="this.isFavorite ? 'fa fa-star fa-5x' : 'fa fa-star-o fa-5x'"   
+
+[ngStyle] = "{
+    'color': this.isFavorite ? 'red' : 'blue',
+    'font-size' : this.isFavorite ? '100px' : '50px'
+}"
+(click)="onClickSpan()"></span> <br>
+<!--
+<span class="fa " 
+    [class.fa-star fa-5x] ="this.isFavorite"
+    [class.fa fa-star-o fa-5x] ="!this.isFavorite"  
+ (click)="onClickSpan()">
+
+</span> 
+
+//Or  2
+
+<span [class]="this.isFavorite ? 'fa fa-star fa-5x' : 'fa fa-star-o fa-5x'"   
+(click)="onClickSpan()">
+</span> 
+
+//Or  3 Directive ngClass
+<span class="fa " 
+    [ngClass] ="{
+        'fa-star fa-5x' : this.isFavorite,
+        'fa-star-o fa-5x' : !this.isFavorite
+    }"  
+ (click)="onClickSpan()">
+
+</span> 
+
+
+-->
+
+<!-- <span class="fa fa-star-o fa-5x" aria-hidden="true"></span>
+ -->
+<h4>span span</h4>
+  

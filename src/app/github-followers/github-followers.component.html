@@ -1,0 +1,12 @@
+<ul class="list-unstyled">
+    <li class="media" *ngFor="let follower of followers">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">
+          <a href="#">{{ follower.login }}</a>
+        </h5>
+        <a [routerLink]="['/github', follower.id, follower.login]"
+        [queryParams]="{page: 1, type: follower.type, var: 'value'}">{{ follower.html_url }}</a>
+      </div>
+    </li>
+  </ul>
+  

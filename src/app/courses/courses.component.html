@@ -1,0 +1,33 @@
+<p>courses works!</p>
+<br>
+<p>{{ body | resume:6 }}</p>
+<br>
+<!-- pipes -->
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">Title : {{ course.titre | lowercase | uppercase}}</li>
+        <li class="list-group-item">Rating : {{ course.avis | number:'1.2-2' }}</li>
+        <li class="list-group-item">Students : {{ course.Participants }}</li>
+        <li class="list-group-item">Price : {{ course.prix | currency:'EUR':'symbol':'3.1-1' }}</li>
+        <li class="list-group-item">releaseDate : {{ course.publicationDate | date:'yyyy-MM-dd' }}</li>
+
+    </ul>
+
+</div>
+
+<br>
+<br>
+<h1 [style.backgroundColor]="isActive ? 'blue': 'red'">Title of Project</h1>
+<!-- <input #email type="text" (keyup.enter)="onKeyUp(email)">
+ -->
+
+ <input [(ngModel)]="email" type="text" (keyup.enter)="onKeyUp()">
+ <br>
+ <p>{{ email }}</p>
+<br>
+<ul>
+    <li *ngFor="let course of courses">{{course}}</li>
+</ul>
+<div (click)="onClickDiv()">
+<button (click)="onClick($event)" class="btn btn-primary">My button</button>
+</div>
