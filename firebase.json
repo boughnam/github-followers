@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "dist/APP-angular5",
+     "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
